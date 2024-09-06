@@ -24,9 +24,9 @@
 
   @IsString()
   @IsOptional()
-  imageUrl?: string; // Novo campo para URL da imagem
+  imageUrl?: string; 
  
 }
  
 
-//Define a estrutura dos dados para a atualização de um anime existente, os campos são opcionais (Partial).
+

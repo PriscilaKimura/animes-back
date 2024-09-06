@@ -19,10 +19,9 @@ export class CreateAnimeDto {
   releaseDate: string;
 
   @IsString()
-  type?: 'filme' | 'série'; // Adicionando o campo tipo (série ou filme)
+  type?: 'filme' | 'série'; 
 
   @IsString()
   @IsNotEmpty()
-  imageUrl: string; // Novo campo para URL da imagem
-
+  imageUrl: string; 
 }
