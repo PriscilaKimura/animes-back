@@ -22,46 +22,57 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-# Backend da API RESTful de Animes
+# API RESTful de Animes - Backend
 
 ## Descrição
 
-O Backend da API RESTful de Animes é um serviço baseado em Node.js para gerenciar uma lista de animes. A API permite operações de CRUD (criar, ler, atualizar e excluir) para os animes e serve como a camada de dados para o frontend.
+Este repositório contém o backend de uma API RESTful para gerenciamento de animes. O objetivo principal é permitir operações CRUD (Criar, Ler, Atualizar, Excluir) para animes. O backend foi desenvolvido utilizando o NestJS, e simula uma camada de acesso a dados (DAO) com armazenamento em memória.
 
 ## Funcionalidades
 
-- **Listar Animes**: Retorna uma lista de todos os animes no banco de dados.
-- **Adicionar Anime**: Permite a inserção de um novo anime no banco de dados.
-- **Editar Anime**: Atualiza as informações de um anime existente.
-- **Excluir Anime**: Remove um anime do banco de dados.
-- **Persistência de Dados**: Armazena dados em um banco de dados relacional.
+- **Listar Animes:** Recupera a lista de todos os animes.
+- **Obter Anime:** Recupera um anime específico com base no ID.
+- **Criar Anime:** Adiciona um novo anime à lista.
+- **Atualizar Anime:** Atualiza as informações de um anime existente.
+- **Excluir Anime:** Remove um anime da lista.
 
-## Tecnologias
+## Estrutura do Código
 
-- **Node.js**: Ambiente de execução para JavaScript no servidor.
-- **Express**: Framework para construir a API RESTful.
-- **Banco de Dados**: (Especifique o banco de dados utilizado, por exemplo, MongoDB, PostgreSQL, etc.)
+- **Controller:** Define as rotas e métodos para as operações CRUD.
+- **Service:** Implementa a lógica de negócios e interage com a camada de armazenamento em memória.
+- **Simulação de DAO:** Simula uma camada de acesso a dados com armazenamento em memória.
 
-Instale as Dependências
-npm install
+## Simulação de Armazenamento em Memória
 
-Inicie a Aplicação
-npm start
+A aplicação utiliza uma simulação de DAO para armazenar os dados dos animes em memória. Não há um banco de dados real; todos os dados são mantidos em uma estrutura de dados na memória do servidor.
 
-A API estará disponível em http://localhost:8080.
+## Boas Práticas de Desenvolvimento
 
-##Notas
-A API está configurada para uso local. Para produção, considere configurar um banco de dados em nuvem e ajustar as configurações de segurança.
-O backend é compatível com o frontend da API RESTful de Animes. Certifique-se de que o frontend esteja configurado para se conectar à URL correta do backend.
+O backend segue boas práticas de desenvolvimento com NestJS, incluindo:
+- Estrutura modular do código.
+- Uso de injeção de dependência.
+- Separação clara entre controllers e services.
+- Simulação de acesso a dados com uma abordagem simplificada para fins de treinamento.
 
-##Melhorias Futuras
-Autenticação e Autorização: Implementar autenticação e controle de acesso para proteger os endpoints.
-Validação de Dados: Adicionar validação mais robusta para os dados recebidos nas requisições.
-Documentação: Criar documentação mais detalhada para os endpoints da API.
-Testes: Implementar testes unitários e de integração para garantir a qualidade e confiabilidade da API.
+## Como Rodar
 
-Contribuições
-Sinta-se à vontade para contribuir com melhorias e correções. Crie um fork do repositório, faça suas alterações e envie um pull request.
+3. Instale as dependências:
+    npm install
 
+4. Inicie o servidor:
+     npm run start:dev
 
+5. A API estará disponível em `http://localhost:8080`.
+
+## Melhorias Futuras
+
+Este projeto ainda tem muito a ser aprimorado. Algumas melhorias previstas incluem:
+- Implementação de um banco de dados real para persistência de dados.
+- Adição de autenticação e autorização.
+- Melhoria na validação de dados e tratamento de erros.
+- Expansão das funcionalidades da API.
+
+## Contribuições
+
+Sinta-se à vontade para contribuir com melhorias, correções de bugs ou novas funcionalidades. Por favor, envie um pull request com suas alterações e descreva as modificações realizadas.
 
