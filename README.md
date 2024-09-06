@@ -22,64 +22,46 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Backend da API RESTful de Animes
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Descrição
 
-## Project setup
+O Backend da API RESTful de Animes é um serviço baseado em Node.js para gerenciar uma lista de animes. A API permite operações de CRUD (criar, ler, atualizar e excluir) para os animes e serve como a camada de dados para o frontend.
 
-```bash
-$ npm install
-```
+## Funcionalidades
 
-## Compile and run the project
+- **Listar Animes**: Retorna uma lista de todos os animes no banco de dados.
+- **Adicionar Anime**: Permite a inserção de um novo anime no banco de dados.
+- **Editar Anime**: Atualiza as informações de um anime existente.
+- **Excluir Anime**: Remove um anime do banco de dados.
+- **Persistência de Dados**: Armazena dados em um banco de dados relacional.
 
-```bash
-# development
-$ npm run start
+## Tecnologias
 
-# watch mode
-$ npm run start:dev
+- **Node.js**: Ambiente de execução para JavaScript no servidor.
+- **Express**: Framework para construir a API RESTful.
+- **Banco de Dados**: (Especifique o banco de dados utilizado, por exemplo, MongoDB, PostgreSQL, etc.)
 
-# production mode
-$ npm run start:prod
-```
+Instale as Dependências
+npm install
 
-## Run tests
+Inicie a Aplicação
+npm start
 
-```bash
-# unit tests
-$ npm run test
+A API estará disponível em http://localhost:8080.
 
-# e2e tests
-$ npm run test:e2e
+##Notas
+A API está configurada para uso local. Para produção, considere configurar um banco de dados em nuvem e ajustar as configurações de segurança.
+O backend é compatível com o frontend da API RESTful de Animes. Certifique-se de que o frontend esteja configurado para se conectar à URL correta do backend.
 
-# test coverage
-$ npm run test:cov
-```
+##Melhorias Futuras
+Autenticação e Autorização: Implementar autenticação e controle de acesso para proteger os endpoints.
+Validação de Dados: Adicionar validação mais robusta para os dados recebidos nas requisições.
+Documentação: Criar documentação mais detalhada para os endpoints da API.
+Testes: Implementar testes unitários e de integração para garantir a qualidade e confiabilidade da API.
 
-## Resources
+Contribuições
+Sinta-se à vontade para contribuir com melhorias e correções. Crie um fork do repositório, faça suas alterações e envie um pull request.
 
-Check out a few resources that may come in handy when working with NestJS:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
