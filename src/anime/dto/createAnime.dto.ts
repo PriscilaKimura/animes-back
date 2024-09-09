@@ -1,5 +1,5 @@
 // Este arquivo define os dados esperados para criar um novo anime.
-import { IsString, IsNotEmpty, IsBoolean, IsDateString } from 'class-validator';
+import { IsString, IsNotEmpty, IsBoolean, IsDateString, IsNumber, IsOptional } from 'class-validator';
 
 export class CreateAnimeDto {
   @IsString()
@@ -24,4 +24,9 @@ export class CreateAnimeDto {
   @IsString()
   @IsNotEmpty()
   imageUrl: string; 
+
+  @IsNumber()  
+  @IsOptional()  
+  ranking?: number;  
+
 }

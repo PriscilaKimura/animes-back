@@ -1,5 +1,5 @@
  // Este arquivo define os dados esperados para atualizar um anime existente
- import { IsString, IsBoolean, IsDateString, IsOptional } from 'class-validator';
+ import { IsString, IsBoolean, IsDateString, IsOptional,  IsNumber } from 'class-validator';
 
  export class UpdateAnimeDto {
    @IsString()
@@ -25,6 +25,10 @@
   @IsString()
   @IsOptional()
   imageUrl?: string; 
+
+  @IsNumber()
+  @IsOptional()
+  ranking?: number;  
  
 }
  

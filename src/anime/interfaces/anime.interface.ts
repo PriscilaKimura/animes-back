@@ -7,5 +7,6 @@
     releaseDate: string;
     type?: 'filme' | 'série'; 
     imageUrl?: string;
+    ranking?: number;  
   }
   
