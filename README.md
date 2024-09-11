@@ -64,6 +64,29 @@ O backend segue boas práticas de desenvolvimento com NestJS, incluindo:
 
 5. A API estará disponível em `http://localhost:8080`.
 
+## Exemplo de Requisição para Criar/Atualizar um Anime no Postman ou em qualquer outra ferramenta que suporte requisições HTTP, como cURL, Insomnia e etc.
+Endpoint: POST /anime ou PUT /anime/:id
+
+{
+  "id": "1",
+  "title": "Meu Amigo Totoro",
+  "description": "Duas irmãs se mudam para o campo e encontram criaturas mágicas na floresta ao redor de sua nova casa.",
+  "type": "filme",
+  "completed": true,
+  "releaseDate": "1988-04-16",
+  "ranking": 1
+}
+
+{
+  "id": "2",
+  "title": "O Serviço de Entregas da Kiki",
+  "description": "Uma jovem bruxa em treinamento se muda para uma nova cidade e inicia seu próprio serviço de entregas.",
+  "type": "filme",
+  "completed": true,
+  "releaseDate": "1989-07-29",
+  "ranking": 2
+}
+
 ## Melhorias Futuras
 
 Este projeto ainda tem muito a ser aprimorado. Algumas melhorias previstas incluem:
