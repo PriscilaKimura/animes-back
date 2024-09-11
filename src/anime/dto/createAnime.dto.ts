@@ -20,13 +20,13 @@ export class CreateAnimeDto {
 
   @IsString()
   type?: 'filme' | 'série'; 
-
+  
+  @IsOptional() 
   @IsString()
-  @IsNotEmpty()
-  imageUrl: string; 
+  imageUrl?: string; 
 
-  @IsNumber()  
   @IsOptional()  
-  ranking?: number;  
+  @IsNumber()
+  ranking?: number;    
 
 }

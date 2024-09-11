@@ -19,16 +19,15 @@
    releaseDate?: string;
 
    @IsString()
-  @IsOptional()
-  type?: 'filme' | 'série'; 
-
-  @IsString()
-  @IsOptional()
-  imageUrl?: string; 
-
-  @IsNumber()
-  @IsOptional()
-  ranking?: number;  
+   type?: 'filme' | 'série'; 
+   
+   @IsOptional() 
+   @IsString()
+   imageUrl?: string; 
+ 
+   @IsOptional()  
+   @IsNumber()
+   ranking?: number;    
  
 }
  
