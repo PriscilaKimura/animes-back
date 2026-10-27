@@ -8,6 +8,10 @@ import { AnimeOrmEntity } from '../anime/infrastructure/persistence/anime.orm-en
 loadEnv();
 
 export function createMikroOrmOptions(clientUrl: string) {
+  const needsSsl =
+    process.env.DATABASE_SSL === 'true' ||
+    /render\.com|sslmode=require/i.test(clientUrl);
+
   return defineConfig({
     driver: PostgreSqlDriver,
     clientUrl,
@@ -15,6 +19,15 @@ export function createMikroOrmOptions(clientUrl: string) {
     namingStrategy: UnderscoreNamingStrategy,
     allowGlobalContext: true,
     extensions: [Migrator],
+    ...(needsSsl
+      ? {
+          driverOptions: {
+            connection: {
+              ssl: { rejectUnauthorized: false },
+            },
+          },
+        }
+      : {}),
     migrations: {
       path: join(process.cwd(), 'dist/database/migrations'),
       pathTs: join(process.cwd(), 'src/database/migrations'),
