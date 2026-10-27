@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: animes-back
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start:prod
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: DATABASE_URL
+        fromDatabase:
+          name: animes-db
+          property: connectionString
+      - key: AWS_REGION
+        value: us-east-1
+      - key: SQS_QUEUE_URL
+        value: ""
+      - key: S3_BUCKET
+        value: ""
+
+databases:
+  - name: animes-db
+    plan: free
+    databaseName: animes
+    user: animes
